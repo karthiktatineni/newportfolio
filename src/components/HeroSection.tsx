@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Download, ArrowDown } from 'lucide-react';
-import profilePhoto from '@/assets/profile-photo.png';
+//import profilePhoto from '@/assets/profile-photo.png';
 
 const HeroSection = () => {
   return (
@@ -49,7 +49,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/30 animate-pulse-glow">
                 <img
-                  src={profilePhoto}
+                  //src={profilePhoto}
                   alt="Karthik Tatineni"
                   className="w-full h-full object-cover"
                 />

@@ -8,7 +8,6 @@ import ProjectDetail from "./pages/ProjectDetail";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from './components/ScrollToTop';
 
-
 const queryClient = new QueryClient();
 
 function App() {
@@ -21,10 +20,10 @@ function App() {
           {/* ScrollToTop ensures every route opens at the top */}
           <ScrollToTop />
           <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/project/:id" element={<ProjectDetail />} />
-            {/* Catch-all for 404 */}
-            <Route path="*" element={<NotFound />} />
+    <Route path="/" element={<Index />} />
+    <Route path="/project/:id" element={<ProjectDetail />} />
+    <Route path="*" element={<NotFound />} />
+            
           </Routes>
         </BrowserRouter>
       </TooltipProvider>

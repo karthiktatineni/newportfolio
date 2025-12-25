@@ -4,10 +4,24 @@ import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { useState, useEffect } from 'react';
 
 const ProjectDetail = () => {
   const { id } = useParams<{ id: string }>();
   const project = projects.find((p) => p.id === id);
+
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+
+  // Close lightbox on ESC key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setLightboxImage(null);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   if (!project) {
     return (
@@ -81,12 +95,13 @@ const ProjectDetail = () => {
                 {project.images.map((img, index) => (
                   <div
                     key={`image-${index}`}
-                    className="bg-card rounded-xl border border-border overflow-hidden w-full sm:w-96 md:w-80 lg:w-96 h-[280px]"
+                    className="bg-card rounded-xl border border-border overflow-hidden w-full sm:w-96 md:w-80 lg:w-96 h-[280px] flex items-center justify-center cursor-pointer"
+                    onClick={() => setLightboxImage(img)}
                   >
                     <img
                       src={img}
                       alt={`${project.title} Image ${index + 1}`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                 ))}
@@ -152,6 +167,27 @@ const ProjectDetail = () => {
       </main>
 
       <Footer />
+
+      {/* Lightbox Overlay */}
+      {lightboxImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+          onClick={() => setLightboxImage(null)}
+        >
+          <img
+            src={lightboxImage}
+            alt="Lightbox"
+            className="max-w-full max-h-full rounded-lg shadow-lg"
+            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking image
+          />
+          <button
+            onClick={() => setLightboxImage(null)}
+            className="absolute top-5 right-5 text-white text-2xl font-bold"
+          >
+            &times;
+          </button>
+        </div>
+      )}
     </div>
   );
 };

@@ -23,33 +23,32 @@ const AboutSection = () => {
       className="py-24 bg-secondary/30"
     >
       <div className="container mx-auto px-6">
-        <h3 className={`section-title ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
-          <Zap className="w-8 h-8 text-primary" />
+        <h3 className={`section-title flex items-center gap-3 mb-12 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
+          <Zap className="w-8 h-8 text-primary flex-shrink-0" />
           About Me
         </h3>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl">
-          <div className="space-y-6">
+        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {/* Left Column */}
+          <div className="flex flex-col justify-start space-y-6">
             {leftContent.map((paragraph, index) => (
               <p
                 key={index}
-                className={`text-muted-foreground leading-relaxed ${
-                  isVisible ? 'animate-fade-in-up' : 'opacity-0'
-                }`}
-                style={{ animationDelay: `${(index + 1) * 100}ms` }}
+                className={`text-muted-foreground leading-relaxed ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
+                style={{ animationDelay: `${(index + 1) * 150}ms` }}
               >
                 {paragraph}
               </p>
             ))}
           </div>
-          <div className="space-y-6">
+
+          {/* Right Column */}
+          <div className="flex flex-col justify-start space-y-6">
             {rightContent.map((paragraph, index) => (
               <p
                 key={index}
-                className={`text-muted-foreground leading-relaxed ${
-                  isVisible ? 'animate-fade-in-up' : 'opacity-0'
-                }`}
-                style={{ animationDelay: `${(index + 3) * 100}ms` }}
+                className={`text-muted-foreground leading-relaxed ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
+                style={{ animationDelay: `${(index + 3) * 150}ms` }}
               >
                 {paragraph}
               </p>

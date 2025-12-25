@@ -26,12 +26,12 @@ const HeroSection = () => {
             </h1>
             
             <p className="text-lg text-muted-foreground max-w-xl animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-              A passionate ECE engineer with a knack for VLSI, Embedded Systems, automation, and intelligent systems.
+             A passionate ECE engineer with a knack for VLSI, Embedded Systems, IoT, and Artificial intelligent systems.
             </p>
             
             <div className="flex flex-wrap gap-4 pt-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               <Button variant="heroOutline" size="lg" asChild>
-                <a href="#" download>
+                <a href="\public\videos\Karthik_resume.pdf" download>
                   <Download className="w-5 h-5" />
                   My Resume
                 </a>

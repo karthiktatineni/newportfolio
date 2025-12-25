@@ -30,7 +30,7 @@ export const projects: Project[] = [
     technologies: ['ESP8266', 'RFID MFRC522', 'Telegram Bot API', 'Arduino IDE', 'Piezo Buzzer'],
     category: 'IoT',
     videos: ['/videos/BEGV7712.MP4'],
-    githubUrl: 'https://github.com/your-username/smart-anti-theft-bag'
+    githubUrl: 'https://github.com/karthiktatineni/Smart-Bag'
   },
   {
     id: 'ai-powered-esp32',
@@ -43,7 +43,8 @@ export const projects: Project[] = [
     ],
     technologies: ['ESP32', 'Google Gemini AI', 'Text-to-Speech', 'Arduino IDE', 'Wi-Fi'],
     category: 'AI/ML',
-    videos: ['/videos/ESP32-AI1.mp4','/videos/ESP32-AI2.mp4']
+    videos: ['/videos/ESP32-AI1.mp4','/videos/ESP32-AI2.mp4'],
+    githubUrl: 'https://github.com/karthiktatineni/Gemini-integrated-ESP32'
   },
   {
   id: 'ollama-local-ai',
@@ -62,7 +63,8 @@ export const projects: Project[] = [
     '/videos/OLLAMA.jpeg',
     '/videos/OUTPUT.jpeg',
     '/videos/NGROK.jpeg'
-  ]
+  ],
+  githubUrl: 'https://github.com/karthiktatineni/Ollama_on_ESP32'
 },
 
   {
@@ -76,7 +78,8 @@ export const projects: Project[] = [
     ],
     technologies: ['React', 'Neon DBMS', 'Node.js', 'Email Automation', 'Tailwind CSS'],
     category: 'Web',
-    videos: ['/videos/klvora.mp4']
+    videos: ['/videos/klvora.mp4'],
+    githubUrl: 'https://github.com/karthiktatineni/luxethreads-studio'
   },
   {
     id: 'personal-ai-bot',
@@ -104,8 +107,8 @@ export const projects: Project[] = [
     ],
     technologies: ['YOLOv5', 'CNN', 'OpenCV', 'PyTorch', 'Python'],
     category: 'AI/ML',
-    videos: ['/videos/helmet.mp4',]
-    
+    videos: ['/videos/helmet.mp4',],
+    githubUrl: 'https://github.com/karthiktatineni/Helmet-tripleride-Detection'
   },
   {
     id: 'smart-home-automation',
@@ -120,7 +123,8 @@ export const projects: Project[] = [
     ],
     technologies: ['ESP8266', 'Alexa', 'Sinric Pro', 'Relay Modules', 'Arduino IDE'],
     category: 'IoT',
-    videos: ['/videos/room.mp4']
+    videos: ['/videos/room.mp4'],
+    githubUrl: 'https://github.com/karthiktatineni/Home-automation'
   },
   {
     id: 'environmental-monitoring',
@@ -136,7 +140,8 @@ export const projects: Project[] = [
     technologies: ['ESP8266', 'DHT11', 'HTML/CSS/JS', 'REST API', 'Arduino IDE'],
     category: 'IoT',
     images: [
-    '/videos/moni1.jpg','/videos/moni2.jpg','/videos/moni3.jpg']
+    '/videos/moni1.jpg','/videos/moni2.jpg','/videos/moni3.jpg'],
+    githubUrl: 'https://github.com/karthiktatineni/weather_monitoring_System'
   },
   {
     id: 'smart-calling-bell',
@@ -204,7 +209,8 @@ export const projects: Project[] = [
     ],
     technologies: ['ESP8266', 'LCD 16x2', 'API Integration', 'Arduino IDE', 'C++'],
     category: 'IoT',
-    videos: ['/videos/joke-teller-demo.mp4']
+    videos: ['/videos/joke-teller-demo.mp4'],
+    githubUrl: 'https://github.com/karthiktatineni/ESP32-based-joke-generator'
   },
   {
     id: 'esp32-desk-mochi',
@@ -219,6 +225,7 @@ export const projects: Project[] = [
     category: 'IoT',
     videos: ['/videos/mochi.mp4'],
     images: [
-    '/videos/mochii.png',]
+    '/videos/mochii.png',],
+    githubUrl: 'https://github.com/karthiktatineni/Desk_mochi'
   }
 ];

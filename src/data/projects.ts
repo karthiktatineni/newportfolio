@@ -29,6 +29,7 @@ export const projects: Project[] = [
     technologies: ['ESP8266', 'RFID MFRC522', 'Telegram Bot API', 'Arduino IDE', 'Piezo Buzzer'],
     category: 'IoT',
     videos: ['/videos/BEGV7712.MP4']
+    
   },
   {
     id: 'ai-powered-esp32',
@@ -88,7 +89,8 @@ export const projects: Project[] = [
     features: ['Botpress-based no-code visual flow setup', 'Custom knowledge base from PDF/resume', 'OpenAI GPT integration', 'Deployed and embeddable on any page'],
     technologies: ['Botpress', 'OpenAI GPT', 'Knowledge Base', 'Web Embedding'],
     category: 'AI/ML',
-    videos: ['/videos/']
+        images: [
+    '/videos/bot.png','/videos/bot2.png'],
   },
   {
     id: 'helmet-detection',
@@ -101,7 +103,8 @@ export const projects: Project[] = [
     ],
     technologies: ['YOLOv5', 'CNN', 'OpenCV', 'PyTorch', 'Python'],
     category: 'AI/ML',
-    videos: ['/videos/helmet.mp4']
+    videos: ['/videos/helmet.mp4',]
+    
   },
   {
     id: 'smart-home-automation',
@@ -131,7 +134,8 @@ export const projects: Project[] = [
     ],
     technologies: ['ESP8266', 'DHT11', 'HTML/CSS/JS', 'REST API', 'Arduino IDE'],
     category: 'IoT',
-    videos: ['/videos/']
+    images: [
+    '/videos/moni1.jpg','/videos/moni2.jpg','/videos/moni3.jpg']
   },
   {
     id: 'smart-calling-bell',
@@ -146,7 +150,8 @@ export const projects: Project[] = [
     ],
     technologies: ['ESP32', 'Blynk', 'Piezo Buzzer', 'Arduino IDE', 'OTA Updates'],
     category: 'IoT',
-    videos: ['/videos/']
+    images: [
+    '/videos/door.png']
   },
   {
     id: 'audio-spectrum-analyzer',
@@ -211,6 +216,8 @@ export const projects: Project[] = [
     ],
     technologies: ['ESP32', 'OLED Display', 'Weather API', 'Animation', 'C++'],
     category: 'IoT',
-    videos: ['/videos/mochi.mp4']
+    videos: ['/videos/mochi.mp4'],
+    images: [
+    '/videos/mochii.png',]
   }
 ];

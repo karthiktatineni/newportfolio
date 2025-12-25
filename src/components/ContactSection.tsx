@@ -14,8 +14,8 @@ const socialLinks = [
 ];
 
 const contactInfo = [
-  { icon: Mail, label: 'Email', value: 'karthik@example.com' },
-  { icon: Phone, label: 'Phone', value: '+91 1234567890' },
+  { icon: Mail, label: 'Email', value: 'karthiktatineni@gmail.com' },
+  { icon: Phone, label: 'Phone', value: '+91 7995466261' },
   { icon: MapPin, label: 'Location', value: 'Hyderabad, India' },
 ];
 

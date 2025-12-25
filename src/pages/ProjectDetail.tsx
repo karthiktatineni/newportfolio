@@ -15,12 +15,12 @@ const ProjectDetail = () => {
   // Close lightbox on ESC key
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
+      if (e.key === 'Escape') {
         setLightboxImage(null);
       }
     };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   if (!project) {
@@ -58,17 +58,32 @@ const ProjectDetail = () => {
 
           {/* Project Header */}
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in-up">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up">
               {project.title}
             </h1>
 
+            {/* ✅ GitHub Link */}
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mb-8 px-6 py-2
+                           rounded-xl bg-zinc-900 text-white
+                           hover:bg-zinc-800 transition"
+              >
+                View Source Code on GitHub
+              </a>
+            )}
+
             {/* Video Gallery */}
             {project.videos && project.videos.length > 0 && (
-              <div className="mb-8 animate-fade-in-up flex flex-wrap justify-center gap-6">
+              <div className="mb-8 flex flex-wrap justify-center gap-6 animate-fade-in-up">
                 {project.videos.map((video, index) => (
                   <div
-                    key={`video-${index}`}
-                    className="bg-card rounded-xl border border-border overflow-hidden w-full sm:w-96 md:w-80 lg:w-96 h-[280px]"
+                    key={index}
+                    className="bg-card rounded-xl border border-border overflow-hidden
+                               w-full sm:w-96 md:w-80 lg:w-96 h-[280px]"
                   >
                     {video.includes('youtube') ? (
                       <iframe
@@ -91,16 +106,18 @@ const ProjectDetail = () => {
 
             {/* Image Gallery */}
             {project.images && project.images.length > 0 && (
-              <div className="mb-8 animate-fade-in-up flex flex-wrap justify-center gap-6">
+              <div className="mb-8 flex flex-wrap justify-center gap-6 animate-fade-in-up">
                 {project.images.map((img, index) => (
                   <div
-                    key={`image-${index}`}
-                    className="bg-card rounded-xl border border-border overflow-hidden w-full sm:w-96 md:w-80 lg:w-96 h-[280px] flex items-center justify-center cursor-pointer"
+                    key={index}
+                    className="bg-card rounded-xl border border-border overflow-hidden
+                               w-full sm:w-96 md:w-80 lg:w-96 h-[280px]
+                               flex items-center justify-center cursor-pointer"
                     onClick={() => setLightboxImage(img)}
                   >
                     <img
                       src={img}
-                      alt={`${project.title} Image ${index + 1}`}
+                      alt={`${project.title} ${index + 1}`}
                       className="w-full h-full object-contain"
                     />
                   </div>
@@ -110,12 +127,11 @@ const ProjectDetail = () => {
 
             {/* Project Description */}
             <div className="mb-20 animate-fade-in-up">
-              <div className="bg-card p-10 rounded-2xl shadow-lg max-w-5xl mx-auto">
+              <div className="bg-card p-10 rounded-2xl shadow-lg">
                 {project.fullDescription.map((paragraph, index) => (
                   <p
                     key={index}
                     className="text-muted-foreground text-lg leading-relaxed mb-6"
-                    style={{ animationDelay: `${(index + 2) * 0.1}s` }}
                   >
                     {paragraph}
                   </p>
@@ -125,12 +141,12 @@ const ProjectDetail = () => {
 
             {/* Features */}
             {project.features && (
-              <div className="mb-10 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-                <h2 className="text-2xl font-bold text-foreground mb-4">Key Features</h2>
+              <div className="mb-10 animate-fade-in-up">
+                <h2 className="text-2xl font-bold mb-4">Key Features</h2>
                 <ul className="grid sm:grid-cols-2 gap-3">
                   {project.features.map((feature, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                      <span className="w-2 h-2 rounded-full bg-primary mt-2" />
                       <span className="text-muted-foreground">{feature}</span>
                     </li>
                   ))}
@@ -139,13 +155,13 @@ const ProjectDetail = () => {
             )}
 
             {/* Technologies */}
-            <div className="animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Technologies Used</h2>
+            <div className="animate-fade-in-up">
+              <h2 className="text-2xl font-bold mb-4">Technologies Used</h2>
               <div className="flex flex-wrap gap-3">
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-4 py-2 bg-secondary text-foreground rounded-full border border-border hover:border-primary/50 transition-colors"
+                    className="px-4 py-2 bg-secondary rounded-full border border-border"
                   >
                     {tech}
                   </span>
@@ -154,7 +170,7 @@ const ProjectDetail = () => {
             </div>
 
             {/* Navigation */}
-            <div className="mt-12 pt-8 border-t border-border flex flex-wrap gap-4">
+            <div className="mt-12 pt-8 border-t border-border">
               <Button variant="heroOutline" asChild>
                 <Link to="/#projects">
                   <ArrowLeft className="w-5 h-5" />
@@ -168,21 +184,21 @@ const ProjectDetail = () => {
 
       <Footer />
 
-      {/* Lightbox Overlay */}
+      {/* Lightbox */}
       {lightboxImage && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black/75 flex items-center justify-center z-50"
           onClick={() => setLightboxImage(null)}
         >
           <img
             src={lightboxImage}
-            alt="Lightbox"
-            className="max-w-full max-h-full rounded-lg shadow-lg"
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking image
+            alt="Preview"
+            className="max-w-full max-h-full rounded-lg"
+            onClick={(e) => e.stopPropagation()}
           />
           <button
+            className="absolute top-5 right-5 text-white text-3xl"
             onClick={() => setLightboxImage(null)}
-            className="absolute top-5 right-5 text-white text-2xl font-bold"
           >
             &times;
           </button>

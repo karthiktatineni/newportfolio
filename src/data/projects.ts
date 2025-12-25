@@ -6,7 +6,7 @@ export interface Project {
   features?: string[];
   technologies: string[];
   category: string;
-  image?: string;
+  images?: string[];
   videos?: string[];
 }
 
@@ -44,20 +44,25 @@ export const projects: Project[] = [
     videos: ['/videos/ESP32-AI1.mp4','/videos/ESP32-AI2.mp4']
   },
   {
-    id: 'ollama-local-ai',
-    title: 'OLLAMA based local AI',
-    shortDescription: 'Local AI on ESP32 using OLLAMA local on PC and forwarded to ESP32',
-    fullDescription: [
-      "This project showcases a powerful integration between the ESP32 and Ollama — a local LLM engine running on a computer. The ESP32 sends a prompt to the Ollama server through an ngrok-exposed endpoint and receives the generated AI response directly on the microcontroller.",
-      "This allows the ESP32 to communicate with advanced language models like LLaMA, Phi, Mistral, and Gemma without relying on cloud services. The system works completely over local hardware, making it fast, private, and ideal for embedded AI applications.",
-      "With this setup, the ESP32 becomes a lightweight AI-enabled device capable of sending queries, controlling responses, and interacting with local LLMs.",
-      "This project demonstrates how compact IoT boards like the ESP32 can be used for advanced AI tasks while maintaining data privacy and reducing latency."
-    ],
-    features: ['Ngrok to expose the Ollama API', 'HTTP-based request/response system', 'ESP32 for sending prompt data', 'Any Ollama-supported AI model'],
-    technologies: ['ESP32', 'Ollama', 'LLaMA/Phi/Mistral', 'Ngrok', 'HTTP API'],
-    category: 'AI/ML',
-    videos: ['/videos/']
-  },
+  id: 'ollama-local-ai',
+  title: 'OLLAMA based local AI',
+  shortDescription: 'Local AI on ESP32 using OLLAMA local on PC and forwarded to ESP32',
+  fullDescription: [
+    "This project showcases a powerful integration between the ESP32 and Ollama — a local LLM engine running on a computer. The ESP32 sends a prompt to the Ollama server through an ngrok-exposed endpoint and receives the generated AI response directly on the microcontroller.",
+    "This allows the ESP32 to communicate with advanced language models like LLaMA, Phi, Mistral, and Gemma without relying on cloud services. The system works completely over local hardware, making it fast, private, and ideal for embedded AI applications.",
+    "With this setup, the ESP32 becomes a lightweight AI-enabled device capable of sending queries, controlling responses, and interacting with local LLMs.",
+    "This project demonstrates how compact IoT boards like the ESP32 can be used for advanced AI tasks while maintaining data privacy and reducing latency."
+  ],
+  features: ['Ngrok to expose the Ollama API', 'HTTP-based request/response system', 'ESP32 for sending prompt data', 'Any Ollama-supported AI model'],
+  technologies: ['ESP32', 'Ollama', 'LLaMA/Phi/Mistral', 'Ngrok', 'HTTP API'],
+  category: 'AI/ML',
+  images: [
+    '/videos/OLLAMA.jpeg',
+    '/videos/OUTPUT.jpeg',
+    '/videos/NGROK.jpeg'
+  ]
+},
+
   {
     id: 'klvora-fashion',
     title: 'Klvora - Fashion Website',

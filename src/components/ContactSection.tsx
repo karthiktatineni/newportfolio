@@ -23,19 +23,49 @@ const ContactSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const isVisible = useScrollAnimation(sectionRef);
   const { toast } = useToast();
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   });
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    setFormData({ name: '', email: '', message: '' });
+    setLoading(true);
+
+    try {
+      const response = await fetch('https://formspree.io/f/mvzpjjze', { // replace YOUR_FORM_ID
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        toast({
+          title: "Error",
+          description: "Something went wrong. Please try again later.",
+          variant: 'destructive',
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again later.",
+        variant: 'destructive',
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -126,9 +156,9 @@ const ContactSection = () => {
                 className="bg-secondary border-border focus:border-primary resize-none"
               />
             </div>
-            <Button type="submit" variant="hero" size="lg" className="w-full">
+            <Button type="submit" variant="hero" size="lg" className="w-full" disabled={loading}>
               <Send className="w-5 h-5" />
-              Send Message
+              {loading ? 'Sending...' : 'Send Message'}
             </Button>
           </form>
         </div>

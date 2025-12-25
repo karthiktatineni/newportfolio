@@ -7,10 +7,10 @@ import { Instagram, Linkedin, Github, Phone, Mail, MapPin, Send } from 'lucide-r
 import { useToast } from '@/hooks/use-toast';
 
 const socialLinks = [
-  { name: 'Instagram', icon: Instagram, href: '#', color: 'hover:text-pink-500' },
-  { name: 'LinkedIn', icon: Linkedin, href: '#', color: 'hover:text-blue-500' },
-  { name: 'GitHub', icon: Github, href: '#', color: 'hover:text-foreground' },
-  { name: 'Phone', icon: Phone, href: 'tel:+1234567890', color: 'hover:text-green-500' },
+  { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/karthik-tatineni/', color: 'hover:text-blue-500' },
+  { name: 'GitHub', icon: Github, href: 'https://github.com/karthiktatineni', color: 'hover:text-foreground' },
+  { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/_karthik._.14/', color: 'hover:text-pink-500' },
+  { name: 'Phone', icon: Phone, href: 'tel:+917995466261', color: 'hover:text-green-500' },
 ];
 
 const contactInfo = [
@@ -65,6 +65,8 @@ const ContactSection = () => {
                 <a
                   key={social.name}
                   href={social.href}
+                  target={social.name !== 'Phone' ? '_blank' : undefined}
+                  rel={social.name !== 'Phone' ? 'noopener noreferrer' : undefined}
                   className={`w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-muted-foreground ${social.color} transition-all duration-300 hover:scale-110`}
                   aria-label={social.name}
                 >

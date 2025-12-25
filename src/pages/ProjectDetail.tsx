@@ -48,64 +48,65 @@ const ProjectDetail = () => {
               {project.title}
             </h1>
 
-{/* 🔴 VIDEO / IMAGE GALLERY */}
-{project.videos && project.videos.length > 0 ? (
-  <div className="mb-8 animate-fade-in-up flex flex-wrap justify-center gap-6">
-    {project.videos.map((video, index) => (
-      <div
-        key={index}
-        className="bg-card rounded-xl border border-border overflow-hidden w-full sm:w-96 md:w-80 lg:w-96"
-      >
-        {video.includes('youtube') ? (
-          <div className="relative w-full h-0 pb-[56.25%]"> {/* 16:9 aspect ratio */}
-            <iframe
-              src={video}
-              title={`${project.title} Video ${index + 1}`}
-              className="absolute top-0 left-0 w-full h-full"
-              allowFullScreen
-            />
-          </div>
-        ) : (
-          <video
-            src={video}
-            controls
-            className="w-full h-auto max-h-[280px] object-contain"
-          />
-        )}
-      </div>
-    ))}
-  </div>
-) : project.image ? (
-  <div className="bg-card rounded-xl border border-border overflow-hidden mb-8 mx-auto max-w-4xl">
-    <img
-      src={project.image}
-      alt={project.title}
-      className="w-full h-auto max-h-[280px] object-contain"
-    />
-  </div>
-) : null}
+            {/* Video Gallery */}
+            {project.videos && project.videos.length > 0 && (
+              <div className="mb-8 animate-fade-in-up flex flex-wrap justify-center gap-6">
+                {project.videos.map((video, index) => (
+                  <div
+                    key={`video-${index}`}
+                    className="bg-card rounded-xl border border-border overflow-hidden w-full sm:w-96 md:w-80 lg:w-96 h-[280px]"
+                  >
+                    {video.includes('youtube') ? (
+                      <iframe
+                        src={video}
+                        title={`${project.title} Video ${index + 1}`}
+                        className="w-full h-full"
+                        allowFullScreen
+                      />
+                    ) : (
+                      <video
+                        src={video}
+                        controls
+                        className="w-full h-full object-cover"
+                      />
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
 
+            {/* Image Gallery */}
+            {project.images && project.images.length > 0 && (
+              <div className="mb-8 animate-fade-in-up flex flex-wrap justify-center gap-6">
+                {project.images.map((img, index) => (
+                  <div
+                    key={`image-${index}`}
+                    className="bg-card rounded-xl border border-border overflow-hidden w-full sm:w-96 md:w-80 lg:w-96 h-[280px]"
+                  >
+                    <img
+                      src={img}
+                      alt={`${project.title} Image ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
 
-
-
-           {/* Project Description */}
-{/* Project Description */}
-<div className="mb-20 animate-fade-in-up"> {/* more bottom spacing */}
-  <div className="bg-card p-10 rounded-2xl shadow-lg max-w-5xl mx-auto">
-    {project.fullDescription.map((paragraph, index) => (
-      <p
-        key={index}
-        className="text-muted-foreground text-lg leading-relaxed mb-6"
-        style={{ animationDelay: `${(index + 2) * 0.1}s` }}
-      >
-        {paragraph}
-      </p>
-    ))}
-  </div>
-</div>
-
-
-
+            {/* Project Description */}
+            <div className="mb-20 animate-fade-in-up">
+              <div className="bg-card p-10 rounded-2xl shadow-lg max-w-5xl mx-auto">
+                {project.fullDescription.map((paragraph, index) => (
+                  <p
+                    key={index}
+                    className="text-muted-foreground text-lg leading-relaxed mb-6"
+                    style={{ animationDelay: `${(index + 2) * 0.1}s` }}
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </div>
 
             {/* Features */}
             {project.features && (

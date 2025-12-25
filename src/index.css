@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 0 0% 100%;
+
+    --card: 222 47% 14%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 222 47% 14%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 0 84% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 222 47% 18%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 222 47% 20%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 0 84% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 47% 25%;
+    --input: 222 47% 20%;
+    --ring: 0 84% 60%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --coral: 0 84% 60%;
+    --navy-dark: 222 47% 11%;
+    --navy-light: 222 47% 16%;
+    --glow-coral: 0 84% 60%;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 0 0% 100%;
+    --card: 222 47% 14%;
+    --card-foreground: 0 0% 100%;
+    --popover: 222 47% 14%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 84% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222 47% 18%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 222 47% 20%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 0 84% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 222 47% 25%;
+    --input: 222 47% 20%;
+    --ring: 0 84% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80;
+  }
+
+  .glow-card {
+    @apply transition-all duration-300;
+  }
+
+  .glow-card:hover {
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.3);
+    transform: translateY(-5px);
+  }
+
+  .photo-glow {
+    box-shadow: 0 0 60px hsl(var(--primary) / 0.4), 0 0 120px hsl(var(--primary) / 0.2);
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold mb-8 flex items-center gap-3;
+  }
+
+  .red-line {
+    @apply w-16 h-1 bg-primary inline-block mr-3;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 60px hsl(var(--primary) / 0.5);
+  }
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }

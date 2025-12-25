@@ -62,19 +62,21 @@ const ProjectDetail = () => {
               {project.title}
             </h1>
 
-            {/* ✅ GitHub Link */}
-            {project.githubUrl && (
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mb-8 px-6 py-2
-                           rounded-xl bg-zinc-900 text-white
-                           hover:bg-zinc-800 transition"
-              >
-                View Source Code on GitHub
-              </a>
-            )}
+{project.githubUrl && (
+  <a
+    href={project.githubUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 mb-8 px-6 py-2
+               rounded-xl bg-zinc-900 text-white
+               hover:bg-zinc-800 transition
+               animate-fade-in-up"
+    style={{ animationDelay: '0.15s' }}
+  >
+    View Source Code on GitHub
+  </a>
+)}
+
 
             {/* Video Gallery */}
             {project.videos && project.videos.length > 0 && (

@@ -7,8 +7,7 @@ export interface Project {
   technologies: string[];
   category: string;
   image?: string;
-  videoPlaceholder?: boolean;
-  video?: string;
+  videos?: string[];
 }
 
 export const categories = ['All', 'IoT', 'AI/ML', 'Web', 'Electronics'];
@@ -20,13 +19,16 @@ export const projects: Project[] = [
     shortDescription: 'ESP8266-based bag with RFID access and Telegram alerts for real-time theft detection.',
     fullDescription: [
       "The Smart Anti-Theft Bag is a compact, IoT-powered backpack that improves personal security using RFID authentication and real-time Telegram alerts. Built using an ESP8266 microcontroller, the system ensures that only authorized users can access the bag's contents.",
+
       "When the bag's zipper is opened, a 5-second timer starts. If no valid RFID card is scanned during this time, a buzzer sounds and a Telegram alert is sent. If the RFID scan is valid, the alarm remains off and access is granted.",
+      
       "This project uses an MFRC522 RFID reader, a piezo buzzer, a physical switch for zipper detection, and Wi-Fi-enabled cloud messaging via Telegram's Bot API. The logic was programmed using the Arduino IDE with ESP8266 libraries.",
+      
       "Key design considerations included timing precision, network reliability, and power optimization. The hardware is compact enough to fit inside any standard backpack."
     ],
     technologies: ['ESP8266', 'RFID MFRC522', 'Telegram Bot API', 'Arduino IDE', 'Piezo Buzzer'],
     category: 'IoT',
-    video: '/videos/BEGV7712.MP4'
+    videos: ['/videos/BEGV7712.MP4']
   },
   {
     id: 'ai-powered-esp32',
@@ -39,7 +41,7 @@ export const projects: Project[] = [
     ],
     technologies: ['ESP32', 'Google Gemini AI', 'Text-to-Speech', 'Arduino IDE', 'Wi-Fi'],
     category: 'AI/ML',
-    videoPlaceholder: true
+    videos: ['/videos/ESP32-AI1.mp4','/videos/ESP32-AI2.mp4']
   },
   {
     id: 'ollama-local-ai',
@@ -54,7 +56,7 @@ export const projects: Project[] = [
     features: ['Ngrok to expose the Ollama API', 'HTTP-based request/response system', 'ESP32 for sending prompt data', 'Any Ollama-supported AI model'],
     technologies: ['ESP32', 'Ollama', 'LLaMA/Phi/Mistral', 'Ngrok', 'HTTP API'],
     category: 'AI/ML',
-    videoPlaceholder: true
+    videos: ['/videos/']
   },
   {
     id: 'klvora-fashion',
@@ -67,7 +69,7 @@ export const projects: Project[] = [
     ],
     technologies: ['React', 'Neon DBMS', 'Node.js', 'Email Automation', 'Tailwind CSS'],
     category: 'Web',
-    videoPlaceholder: true
+    videos: ['/videos/klvora.mp4']
   },
   {
     id: 'personal-ai-bot',
@@ -81,7 +83,7 @@ export const projects: Project[] = [
     features: ['Botpress-based no-code visual flow setup', 'Custom knowledge base from PDF/resume', 'OpenAI GPT integration', 'Deployed and embeddable on any page'],
     technologies: ['Botpress', 'OpenAI GPT', 'Knowledge Base', 'Web Embedding'],
     category: 'AI/ML',
-    videoPlaceholder: true
+    videos: ['/videos/']
   },
   {
     id: 'helmet-detection',
@@ -94,7 +96,7 @@ export const projects: Project[] = [
     ],
     technologies: ['YOLOv5', 'CNN', 'OpenCV', 'PyTorch', 'Python'],
     category: 'AI/ML',
-    videoPlaceholder: true
+    videos: ['/videos/helmet.mp4']
   },
   {
     id: 'smart-home-automation',
@@ -109,7 +111,7 @@ export const projects: Project[] = [
     ],
     technologies: ['ESP8266', 'Alexa', 'Sinric Pro', 'Relay Modules', 'Arduino IDE'],
     category: 'IoT',
-    videoPlaceholder: true
+    videos: ['/videos/room.mp4']
   },
   {
     id: 'environmental-monitoring',
@@ -124,7 +126,7 @@ export const projects: Project[] = [
     ],
     technologies: ['ESP8266', 'DHT11', 'HTML/CSS/JS', 'REST API', 'Arduino IDE'],
     category: 'IoT',
-    videoPlaceholder: true
+    videos: ['/videos/']
   },
   {
     id: 'smart-calling-bell',
@@ -139,7 +141,7 @@ export const projects: Project[] = [
     ],
     technologies: ['ESP32', 'Blynk', 'Piezo Buzzer', 'Arduino IDE', 'OTA Updates'],
     category: 'IoT',
-    videoPlaceholder: true
+    videos: ['/videos/']
   },
   {
     id: 'audio-spectrum-analyzer',
@@ -152,7 +154,7 @@ export const projects: Project[] = [
     ],
     technologies: ['Analog Electronics', 'Capacitors', 'Zener Diodes', 'Rectifier Diodes', 'PCB Design'],
     category: 'Electronics',
-    videoPlaceholder: true
+    videos: ['/videos/sepctrum.mp4']
   },
   {
     id: 'ambient-light-esp',
@@ -165,7 +167,7 @@ export const projects: Project[] = [
     ],
     technologies: ['ESP8266', 'WLED', 'WS2812', 'SignalRGB', 'LED Programming'],
     category: 'IoT',
-    videoPlaceholder: true
+    videos: ['/videos/amb.mp4']
   },
   {
     id: 'travel-guide-app',
@@ -178,7 +180,7 @@ export const projects: Project[] = [
     ],
     technologies: ['React', 'JavaScript', 'CSS', 'Local Storage', 'UI/UX Design'],
     category: 'Web',
-    videoPlaceholder: true
+    videos: ['/videos/']
   },
   {
     id: 'esp-joke-generator',
@@ -191,7 +193,7 @@ export const projects: Project[] = [
     ],
     technologies: ['ESP8266', 'LCD 16x2', 'API Integration', 'Arduino IDE', 'C++'],
     category: 'IoT',
-    videoPlaceholder: true
+    videos: ['/videos/joke-teller-demo.mp4']
   },
   {
     id: 'esp32-desk-mochi',
@@ -204,6 +206,6 @@ export const projects: Project[] = [
     ],
     technologies: ['ESP32', 'OLED Display', 'Weather API', 'Animation', 'C++'],
     category: 'IoT',
-    videoPlaceholder: true
+    videos: ['/videos/mochi.mp4']
   }
 ];

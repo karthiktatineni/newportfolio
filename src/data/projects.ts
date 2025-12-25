@@ -8,6 +8,7 @@ export interface Project {
   category: string;
   images?: string[];
   videos?: string[];
+  githubUrl?: string;
 }
 
 export const categories = ['All', 'IoT', 'AI/ML', 'Web', 'Electronics'];
@@ -28,8 +29,8 @@ export const projects: Project[] = [
     ],
     technologies: ['ESP8266', 'RFID MFRC522', 'Telegram Bot API', 'Arduino IDE', 'Piezo Buzzer'],
     category: 'IoT',
-    videos: ['/videos/BEGV7712.MP4']
-    
+    videos: ['/videos/BEGV7712.MP4'],
+    githubUrl: 'https://github.com/your-username/smart-anti-theft-bag'
   },
   {
     id: 'ai-powered-esp32',

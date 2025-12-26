@@ -231,7 +231,7 @@ export const projects: Project[] = [
     {
     id: 'verilog-logic-gates-project',
     title: 'Logic gates using verilog',
-    shortDescription: 'ESP8266-based bag with RFID access and Telegram alerts for real-time theft detection.',
+    shortDescription: 'Implementing basic combinational logic gates—AND, OR, NOT, NAND, NOR, XOR, and XNOR—using Verilog HDL, with a testbench.',
     fullDescription: [
       "This project implements basic combinational logic gates—AND, OR, NOT, NAND, NOR, XOR, and XNOR—using Verilog HDL. A dedicated testbench simulates all input combinations (00, 01, 10, 11) and displays the outputs as a truth table.",
       "VCD waveform files are generated for visualization and verification of gate operations. It demonstrates fundamental digital logic design, structured testbench creation, and module verification techniques. This project forms a foundation for building more complex combinational and sequential circuits."
@@ -240,5 +240,19 @@ export const projects: Project[] = [
     category: 'VLSI',
     images: [
     '/videos/gates.png','/videos/gatestable.png','/videos/gateswave.png']
+  },
+      {
+    id: 'verilog-Half-Adder-Subtractor-project',
+    title: 'Half Adder and Subtractor using verilog',
+    shortDescription: 'Implementing a combined Half Adder and Half Subtractor with two inputs (A, B)',
+    fullDescription: [
+  "This project implements a combined Half Adder and Half Subtractor using Verilog HDL. The module takes two inputs (A and B) and generates four outputs: SUM, COUT, DIFF, and BOUT. A dedicated testbench simulates all input combinations (00, 01, 10, 11) and displays the outputs as a formatted truth table.",
+  "VCD waveform files are generated for visualization and verification of the operations. It demonstrates fundamental combinational logic design, structured testbench creation, and module verification techniques. This project serves as a foundation for building more advanced multi-bit adders, subtractors, and arithmetic logic units (ALUs)."
+],
+
+    technologies: ['EDAplayground', 'Verilog', 'Adder','Subtractor', 'RTL modeling'],
+    category: 'VLSI',
+    images: [
+    '/videos/has.png','/videos/haswave.png']
   },
 ];

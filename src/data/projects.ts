@@ -227,5 +227,18 @@ export const projects: Project[] = [
     images: [
     '/videos/mochii.png',],
     githubUrl: 'https://github.com/karthiktatineni/Desk_mochi'
-  }
+  },
+    {
+    id: 'verilog-logic-gates-project',
+    title: 'Logic gates using verilog',
+    shortDescription: 'ESP8266-based bag with RFID access and Telegram alerts for real-time theft detection.',
+    fullDescription: [
+      "This project implements basic combinational logic gates—AND, OR, NOT, NAND, NOR, XOR, and XNOR—using Verilog HDL. A dedicated testbench simulates all input combinations (00, 01, 10, 11) and displays the outputs as a truth table.",
+      "VCD waveform files are generated for visualization and verification of gate operations. It demonstrates fundamental digital logic design, structured testbench creation, and module verification techniques. This project forms a foundation for building more complex combinational and sequential circuits."
+    ],
+    technologies: ['EDAplayground', 'Verilog', 'Logic Gates', 'RTL modeling'],
+    category: 'VLSI',
+    images: [
+    '/videos/gates.png','/videos/gatestable.png','/videos/gateswave.png']
+  },
 ];

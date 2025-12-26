@@ -11,7 +11,7 @@ export interface Project {
   githubUrl?: string;
 }
 
-export const categories = ['All', 'IoT', 'AI/ML', 'Web', 'Electronics'];
+export const categories = ['All', 'IoT', 'AI/ML', 'Web', 'Electronics','VLSI'];
 
 export const projects: Project[] = [
   {

@@ -253,6 +253,6 @@ export const projects: Project[] = [
     technologies: ['EDAplayground', 'Verilog', 'Adder','Subtractor', 'RTL modeling'],
     category: 'VLSI',
     images: [
-    '/videos/has.png','/videos/haswave.png','/videos/haswave.png']
+    '/videos/has.png','/videos/haswave.png']
   },
 ];

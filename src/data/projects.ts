@@ -250,7 +250,7 @@ export const projects: Project[] = [
   "VCD waveform files are generated for visualization and verification of the operations. It demonstrates fundamental combinational logic design, structured testbench creation, and module verification techniques. This project serves as a foundation for building more advanced multi-bit adders, subtractors, and arithmetic logic units (ALUs)."
 ],
 
-    technologies: ['EDAplayground', 'Verilog', 'Adder','Subtractor', 'RTL modeling','HDL'],
+    technologies: ['EDAplayground', 'Verilog', 'Adder','Subtractor', 'RTL modeling'],
     category: 'VLSI',
     images: [
     '/videos/has.png','/videos/haswave.png']

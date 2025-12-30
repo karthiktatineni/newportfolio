@@ -86,7 +86,7 @@ const ContactSection = () => {
             style={{ animationDelay: '100ms' }}
           >
             <p className="text-muted-foreground text-lg">
-              Feel free to reach out for collaborations, project discussions, or just a friendly chat about technology!
+              Feel free to reach out!
             </p>
 
             {/* Social Links */}

@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Download, ArrowDown } from 'lucide-react';
-//import profilePhoto from '@/assets/profile-photo.png';
+import profilePhoto from '@/assets/profile-photo.jpeg';
 
 const HeroSection = () => {
   return (
@@ -26,16 +26,17 @@ const HeroSection = () => {
             </h1>
             
             <p className="text-lg text-muted-foreground max-w-xl animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-             A passionate ECE engineer with a knack for VLSI, Embedded Systems, IoT, and Artificial intelligent systems.
+              A passionate ECE engineer with a knack for VLSI, Embedded Systems, automation, and intelligent systems.
             </p>
             
             <div className="flex flex-wrap gap-4 pt-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              <Button variant="heroOutline" size="lg" asChild>
-                <a href="\public\videos\Karthik_resume.pdf" download>
-                  <Download className="w-5 h-5" />
-                  My Resume
-                </a>
-              </Button>
+<Button variant="heroOutline" size="lg" asChild>
+  <a href="/videos/Karthik_resume.pdf" download>
+    <Download className="w-5 h-5" />
+    My Resume
+  </a>
+</Button>
+
               <Button variant="hero" size="lg" asChild>
                 <a href="#projects">
                   View My Work
@@ -49,7 +50,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/30 animate-pulse-glow">
                 <img
-                  //src={profilePhoto}
+                  src={profilePhoto}
                   alt="Karthik Tatineni"
                   className="w-full h-full object-cover"
                 />

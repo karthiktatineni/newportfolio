@@ -62,20 +62,20 @@ const ProjectDetail = () => {
               {project.title}
             </h1>
 
-{project.githubUrl && (
-  <a
-    href={project.githubUrl}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center gap-2 mb-8 px-6 py-2
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mb-8 px-6 py-2
                rounded-xl bg-zinc-900 text-white
                hover:bg-zinc-800 transition
                animate-fade-in-up"
-    style={{ animationDelay: '0.15s' }}
-  >
-    View Source Code on GitHub
-  </a>
-)}
+                style={{ animationDelay: '0.15s' }}
+              >
+                View Source Code on GitHub
+              </a>
+            )}
 
 
             {/* Video Gallery */}
@@ -85,7 +85,7 @@ const ProjectDetail = () => {
                   <div
                     key={index}
                     className="bg-card rounded-xl border border-border overflow-hidden
-                               w-full sm:w-96 md:w-80 lg:w-96 h-[280px]"
+                               w-full sm:w-96 md:w-80 lg:w-96 h-[320px] flex items-center justify-center"
                   >
                     {video.includes('youtube') ? (
                       <iframe
@@ -98,7 +98,8 @@ const ProjectDetail = () => {
                       <video
                         src={video}
                         controls
-                        className="w-full h-full object-cover"
+                        playsInline
+                        className="w-full h-full object-contain"
                       />
                     )}
                   </div>
@@ -113,8 +114,7 @@ const ProjectDetail = () => {
                   <div
                     key={index}
                     className="bg-card rounded-xl border border-border overflow-hidden
-                               w-full sm:w-96 md:w-80 lg:w-96 h-[280px]
-                               flex items-center justify-center cursor-pointer"
+                               w-full sm:w-96 md:w-80 lg:w-96 aspect-video flex items-center justify-center cursor-pointer"
                     onClick={() => setLightboxImage(img)}
                   >
                     <img

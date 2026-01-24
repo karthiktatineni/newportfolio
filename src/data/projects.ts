@@ -11,7 +11,7 @@ export interface Project {
   githubUrl?: string;
 }
 
-export const categories = ['All', 'IoT', 'AI/ML', 'Web', 'Electronics','VLSI'];
+export const categories = ['All', 'IoT', 'AI/ML', 'Web', 'Electronics', 'VLSI'];
 
 export const projects: Project[] = [
   {
@@ -22,9 +22,9 @@ export const projects: Project[] = [
       "The Smart Anti-Theft Bag is a compact, IoT-powered backpack that improves personal security using RFID authentication and real-time Telegram alerts. Built using an ESP8266 microcontroller, the system ensures that only authorized users can access the bag's contents.",
 
       "When the bag's zipper is opened, a 5-second timer starts. If no valid RFID card is scanned during this time, a buzzer sounds and a Telegram alert is sent. If the RFID scan is valid, the alarm remains off and access is granted.",
-      
+
       "This project uses an MFRC522 RFID reader, a piezo buzzer, a physical switch for zipper detection, and Wi-Fi-enabled cloud messaging via Telegram's Bot API. The logic was programmed using the Arduino IDE with ESP8266 libraries.",
-      
+
       "Key design considerations included timing precision, network reliability, and power optimization. The hardware is compact enough to fit inside any standard backpack."
     ],
     technologies: ['ESP8266', 'RFID MFRC522', 'Telegram Bot API', 'Arduino IDE', 'Piezo Buzzer'],
@@ -43,29 +43,29 @@ export const projects: Project[] = [
     ],
     technologies: ['ESP32', 'Google Gemini AI', 'Text-to-Speech', 'Arduino IDE', 'Wi-Fi'],
     category: 'AI/ML',
-    videos: ['/videos/ESP32-AI1.mp4','/videos/ESP32-AI2.mp4'],
+    videos: ['/videos/ESP32-AI1.mp4', '/videos/ESP32-AI2.mp4'],
     githubUrl: 'https://github.com/karthiktatineni/Gemini-integrated-ESP32'
   },
   {
-  id: 'ollama-local-ai',
-  title: 'OLLAMA based local AI',
-  shortDescription: 'Local AI on ESP32 using OLLAMA local on PC and forwarded to ESP32',
-  fullDescription: [
-    "This project showcases a powerful integration between the ESP32 and Ollama — a local LLM engine running on a computer. The ESP32 sends a prompt to the Ollama server through an ngrok-exposed endpoint and receives the generated AI response directly on the microcontroller.",
-    "This allows the ESP32 to communicate with advanced language models like LLaMA, Phi, Mistral, and Gemma without relying on cloud services. The system works completely over local hardware, making it fast, private, and ideal for embedded AI applications.",
-    "With this setup, the ESP32 becomes a lightweight AI-enabled device capable of sending queries, controlling responses, and interacting with local LLMs.",
-    "This project demonstrates how compact IoT boards like the ESP32 can be used for advanced AI tasks while maintaining data privacy and reducing latency."
-  ],
-  features: ['Ngrok to expose the Ollama API', 'HTTP-based request/response system', 'ESP32 for sending prompt data', 'Any Ollama-supported AI model'],
-  technologies: ['ESP32', 'Ollama', 'LLaMA/Phi/Mistral', 'Ngrok', 'HTTP API'],
-  category: 'AI/ML',
-  images: [
-    '/videos/OLLAMA.jpeg',
-    '/videos/OUTPUT.jpeg',
-    '/videos/NGROK.jpeg'
-  ],
-  githubUrl: 'https://github.com/karthiktatineni/Ollama_on_ESP32'
-},
+    id: 'ollama-local-ai',
+    title: 'OLLAMA based local AI',
+    shortDescription: 'Local AI on ESP32 using OLLAMA local on PC and forwarded to ESP32',
+    fullDescription: [
+      "This project showcases a powerful integration between the ESP32 and Ollama — a local LLM engine running on a computer. The ESP32 sends a prompt to the Ollama server through an ngrok-exposed endpoint and receives the generated AI response directly on the microcontroller.",
+      "This allows the ESP32 to communicate with advanced language models like LLaMA, Phi, Mistral, and Gemma without relying on cloud services. The system works completely over local hardware, making it fast, private, and ideal for embedded AI applications.",
+      "With this setup, the ESP32 becomes a lightweight AI-enabled device capable of sending queries, controlling responses, and interacting with local LLMs.",
+      "This project demonstrates how compact IoT boards like the ESP32 can be used for advanced AI tasks while maintaining data privacy and reducing latency."
+    ],
+    features: ['Ngrok to expose the Ollama API', 'HTTP-based request/response system', 'ESP32 for sending prompt data', 'Any Ollama-supported AI model'],
+    technologies: ['ESP32', 'Ollama', 'LLaMA/Phi/Mistral', 'Ngrok', 'HTTP API'],
+    category: 'AI/ML',
+    images: [
+      '/videos/OLLAMA.jpeg',
+      '/videos/OUTPUT.jpeg',
+      '/videos/NGROK.jpeg'
+    ],
+    githubUrl: 'https://github.com/karthiktatineni/Ollama_on_ESP32'
+  },
 
   {
     id: 'klvora-fashion',
@@ -93,8 +93,8 @@ export const projects: Project[] = [
     features: ['Botpress-based no-code visual flow setup', 'Custom knowledge base from PDF/resume', 'OpenAI GPT integration', 'Deployed and embeddable on any page'],
     technologies: ['Botpress', 'OpenAI GPT', 'Knowledge Base', 'Web Embedding'],
     category: 'AI/ML',
-        images: [
-    '/videos/bot.png','/videos/bot2.png'],
+    images: [
+      '/videos/bot.png', '/videos/bot2.png'],
   },
   {
     id: 'helmet-detection',
@@ -140,7 +140,7 @@ export const projects: Project[] = [
     technologies: ['ESP8266', 'DHT11', 'HTML/CSS/JS', 'REST API', 'Arduino IDE'],
     category: 'IoT',
     images: [
-    '/videos/moni1.jpg','/videos/moni2.jpg','/videos/moni3.jpg'],
+      '/videos/moni1.jpg', '/videos/moni2.jpg', '/videos/moni3.jpg'],
     githubUrl: 'https://github.com/karthiktatineni/weather_monitoring_System'
   },
   {
@@ -157,7 +157,7 @@ export const projects: Project[] = [
     technologies: ['ESP32', 'Blynk', 'Piezo Buzzer', 'Arduino IDE', 'OTA Updates'],
     category: 'IoT',
     images: [
-    '/videos/door.png']
+      '/videos/door.png']
   },
   {
     id: 'audio-spectrum-analyzer',
@@ -225,10 +225,10 @@ export const projects: Project[] = [
     category: 'IoT',
     videos: ['/videos/mochi.mp4'],
     images: [
-    '/videos/mochii.png',],
+      '/videos/mochii.png',],
     githubUrl: 'https://github.com/karthiktatineni/Desk_mochi'
   },
-    {
+  {
     id: 'verilog-logic-gates-project',
     title: 'Logic gates using verilog',
     shortDescription: 'Implementing basic combinational logic gates—AND, OR, NOT, NAND, NOR, XOR, and XNOR—using Verilog HDL, with a testbench.',
@@ -239,20 +239,48 @@ export const projects: Project[] = [
     technologies: ['EDAplayground', 'Verilog', 'Logic Gates', 'RTL modeling'],
     category: 'VLSI',
     images: [
-    '/videos/gates.png','/videos/gatestable.png','/videos/gateswave.png']
+      '/videos/gates.png', '/videos/gatestable.png', '/videos/gateswave.png']
   },
-      {
+  {
     id: 'verilog-Half-Adder-Subtractor-project',
     title: 'Half Adder and Subtractor using verilog',
     shortDescription: 'Implementing a combined Half Adder and Half Subtractor with two inputs (A, B)',
     fullDescription: [
-  "This project implements a combined Half Adder and Half Subtractor using Verilog HDL. The module takes two inputs (A and B) and generates four outputs: SUM, COUT, DIFF, and BOUT. A dedicated testbench simulates all input combinations (00, 01, 10, 11) and displays the outputs as a formatted truth table.",
-  "VCD waveform files are generated for visualization and verification of the operations. It demonstrates fundamental combinational logic design, structured testbench creation, and module verification techniques. This project serves as a foundation for building more advanced multi-bit adders, subtractors, and arithmetic logic units (ALUs)."
-],
+      "This project implements a combined Half Adder and Half Subtractor using Verilog HDL. The module takes two inputs (A and B) and generates four outputs: SUM, COUT, DIFF, and BOUT. A dedicated testbench simulates all input combinations (00, 01, 10, 11) and displays the outputs as a formatted truth table.",
+      "VCD waveform files are generated for visualization and verification of the operations. It demonstrates fundamental combinational logic design, structured testbench creation, and module verification techniques. This project serves as a foundation for building more advanced multi-bit adders, subtractors, and arithmetic logic units (ALUs)."
+    ],
 
-    technologies: ['EDAplayground', 'Verilog', 'Adder','Subtractor', 'RTL modeling'],
+    technologies: ['EDAplayground', 'Verilog', 'Adder', 'Subtractor', 'RTL modeling.'],
     category: 'VLSI',
     images: [
-    '/videos/has.png','/videos/haswave.png']
+      '/videos/has.png', '/videos/haswave.png']
+  },
+  {
+    id: 'iare-consortium',
+    title: 'IARE Consortium',
+    shortDescription: 'College event management platform with admin panel for handling consortium activities.',
+    fullDescription: [
+      "A comprehensive web platform built for IARE's technical consortium to streamline event management and student participation.",
+      "Features a robust admin panel for organizing events, tracking registrations, and managing content dynamically.",
+      "Built using React and Vite for a fast, modern frontend, with Firebase handling real-time data and authentication."
+    ],
+    technologies: ['React', 'Vite', 'Firebase', 'Vercel', 'Tailwind CSS', 'Domain management'],
+    category: 'Web',
+    videos: ['/videos/iare-const.mp4'],
+    githubUrl: 'https://github.com/karthiktatineni/iareconsortium25'
+  },
+  {
+    id: 'iare-mun',
+    title: 'IARE MUN',
+    shortDescription: 'Official Model United Nations platform with admin dashboard for delegate registration.',
+    fullDescription: [
+      "The official website for IARE Model United Nations, designed to handle large-scale delegate registrations and committee allocations.",
+      "Includes a secure admin dashboard for the secretariat to manage applications, allocate countries, and publish updates.",
+      "Leverages Firebase for scalable database solutions and Vercel for reliable hosting, ensuring high availability during peak registration times."
+    ],
+    technologies: ['React', 'Vite', 'Firebase', 'Vercel', 'Tailwind CSS', 'Domain management'],
+    category: 'Web',
+    videos: ['/videos/iaremun.mp4'],
+    githubUrl: 'https://github.com/karthiktatineni/munfirebase'
   },
 ];

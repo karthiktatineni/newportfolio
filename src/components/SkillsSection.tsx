@@ -6,17 +6,17 @@ const skillCategories = [
   {
     title: 'Coding & Engineering Skills',
     icon: Code,
-    skills: ['C / C++', 'Python', 'VHDL', 'Web Development (HTML, CSS, JS)', 'Firmware Debugging', 'PCB Design', 'Microcontroller Integration', 'Sensor Calibration', 'API Integration'],
+    skills: ['C','C++','Python','TypeScript','VHDL','HTML','CSS','React','Vite','Node.js','Next.js','API Integration(RESTAPI)','SQL','PostgreSQL','RDBMS','RTOS (FreeRTOS)','Firmware Debugging','Microcontroller Integration','PCB Design','Sensor Calibration',],
   },
   {
     title: 'Tech Domains',
     icon: Cpu,
-    skills: ['IoT', 'Embedded Systems', 'VLSI', 'Automation', 'AI Applications', 'CAD', 'Analog Electronics'],
+    skills: ['IoT', 'Embedded Systems', 'VLSI', 'Automation', 'AI Applications', 'CAD', 'Analog Electronics','Web development','Database Management'],
   },
   {
     title: 'Tools & Platforms',
     icon: Wrench,
-    skills: ['ESP', 'Arduino IDE', 'UltimakerCura', 'NI Multisim', 'Proteus', 'Cadence', 'Blender', 'Blynk', 'I2C / SPI / UART', 'Git & GitHub', 'Vercel', 'Postman', 'Fusion 360'],
+    skills: ['ESP', 'Arduino IDE', 'Firebase','Cloudflare','UltimakerCura', 'NI Multisim', 'Proteus', 'Cadence', 'Blender', 'Blynk', 'I2C / SPI / UART', 'Git & GitHub', 'Vercel', 'Postman', 'Fusion 360','Docker (basic)','Flutter (basic)'],
   },
 ];
 

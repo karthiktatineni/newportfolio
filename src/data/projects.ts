@@ -11,7 +11,7 @@ export interface Project {
   githubUrl?: string;
 }
 
-export const categories = ['All', 'IoT', 'AI/ML', 'Web', 'Electronics', 'VLSI'];
+export const categories = ['All', 'IoT', 'AI/ML', 'Web', 'Electronics', 'VLSI', 'Cloud'];
 
 export const projects: Project[] = [
   {
@@ -283,4 +283,30 @@ export const projects: Project[] = [
     videos: ['/videos/iaremun.mp4'],
     githubUrl: 'https://github.com/karthiktatineni/munfirebase'
   },
+  {
+  id: 'nextcloud-home-server',
+  title: 'Nextcloud Personal Home Cloud Server',
+  shortDescription: 'Self-hosted Nextcloud cloud server built on a personal PC with external hard disk storage and secured worldwide access via Cloudflare Tunnel.',
+  fullDescription: [
+    "This project involves setting up a self-hosted Nextcloud home server on a personal PC using Docker, with an external hard disk configured for persistent data storage. The server provides private cloud features such as file storage, photo backup, user management, and web-based access.",
+    "Cloudflare Tunnel is used to securely expose the server to the internet without port forwarding, enabling encrypted worldwide access through a custom domain. The setup includes database integration, volume mapping, HTTPS security, and performance optimization, demonstrating practical skills in self-hosting, networking, and cloud infrastructure management."
+  ],
+  technologies: [
+    'Nextcloud',
+    'Docker',
+    'PostgreSQL',
+    'Cloudflare Tunnel',
+    'Self-Hosting',
+    'Private Cloud',
+    'Networking'
+  ],
+  category: 'Cloud',
+  images: [
+    '/videos/server1.jpeg',
+    '/videos/server2.jpeg',
+    '/videos/server3.jpeg'
+  ],
+  githubUrl: 'https://github.com/karthiktatineni/localcloud'
+},
+
 ];
